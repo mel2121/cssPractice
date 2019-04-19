@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  background-color: #456990;
+  height: 100%;
+ flex-flow: row wrap;
+   align-items: flex-start;
+  justify-contnet: space-around;
+  align-content: center;
+}
+
+.item {
+  background-color: #eca400;
+  height: 20%;
+  padding: 20px;
+  font-family: "Georgia";
+  margin: 2%; 
+  border: 1px solid black;
+  font-size:16px;
+}
+h1 {
+  display:flex;
+  background-color: #bf211e;
+  color: #544B3D;
+  justify-content: center;
+  
+}
+@media all and (max-width: 800px) {
+  .container {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .container {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+  .item {
+    font-size: 12px;
+  }
+}
